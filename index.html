@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>#1 Website Design | WebDesignFLA</title>
+  <meta name="description" content="WebDesignFLA is a website design, development, and marketing agency in Jupiter, FL. We have built hundreds of business websites nationwide. Call (561) 464-6222 for a free quote." />
+  <link rel="canonical" href="https://webdesignfla.com/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+          colors: {
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+            primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            accent: { DEFAULT: 'hsl(var(--accent))', foreground: 'hsl(var(--accent-foreground))' },
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            'mono-tech': ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body class="grain-overlay relative min-h-screen flex flex-col bg-background text-foreground">
+
+  <!-- ─── HEADER ─────────────────────────────────────────────── -->
+  <header id="site-header" class="sticky top-0 z-50 w-full border-b border-white/5 bg-[#0A192F] transition-all duration-300">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div id="header-inner" class="flex items-center justify-between h-16 transition-all duration-300">
+        <a href="/" class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-white text-base sm:text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7">
+          <a href="/" data-nav-link="home" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Home<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="/web-design/" data-nav-link="web-design" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Web Design<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="/seo/" data-nav-link="seo" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">SEO<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="/social/" data-nav-link="social" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Social Media<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="/portfolio/" data-nav-link="portfolio" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Portfolio<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="tel:+15614646222" class="hidden sm:inline-flex h-9 items-center gap-2 rounded-lg bg-[#00D4FF] px-3 text-sm font-semibold text-[#071427] hover:bg-[#2EE9C6] transition-colors">
+            <i data-lucide="phone" class="h-4 w-4"></i>(561) 464-6222
+          </a>
+          <a href="tel:+15614646222" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#00D4FF] text-[#071427]" aria-label="Call us">
+            <i data-lucide="phone" class="h-4 w-4"></i>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white hover:bg-white/10" aria-label="Open menu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile overlay + drawer -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-[60]" aria-hidden="true"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#0A192F] text-white z-[70] border-l border-white/10">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <span class="font-display text-lg font-semibold">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        <button id="mobile-menu-close" class="inline-flex h-8 w-8 items-center justify-center rounded-lg hover:bg-white/10" aria-label="Close menu">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <a href="/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Home</a>
+        <a href="/web-design/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Web Design</a>
+        <a href="/seo/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">SEO</a>
+        <a href="/social/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Social Media</a>
+        <a href="/portfolio/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Portfolio</a>
+        <a href="tel:+15614646222" class="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-[#00D4FF] px-4 py-3 font-semibold text-[#071427]">
+          <i data-lucide="phone" class="h-4 w-4"></i>Call (561) 464-6222
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── MAIN ────────────────────────────────────────────────── -->
+  <main class="flex-1 relative z-[2]">
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden hero-bg text-white">
+      <div class="absolute inset-0 blueprint-bg opacity-30" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-28">
+        <div class="grid gap-12 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">
+                <i data-lucide="map-pin" class="mr-1.5 h-3.5 w-3.5 text-[#00D4FF]"></i>Jupiter, FL · Nationwide
+              </span>
+              <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">
+                <i data-lucide="star" class="mr-1.5 h-3.5 w-3.5 text-[#00D4FF]"></i>639+ Sites Launched
+              </span>
+            </div>
+            <h1 class="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
+              Websites that look <span class="text-[#00D4FF]">premium</span><br class="hidden sm:block" /> — and actually convert.
+            </h1>
+            <p class="mt-5 max-w-xl text-base sm:text-lg text-white/75 leading-relaxed">
+              WebDesignFLA is a website design, development, and marketing agency located in Jupiter, FL. We have developed several hundred websites for businesses nationwide — each one built to win customers, not just look good.
+            </p>
+            <div class="mt-7 flex flex-wrap items-center gap-3">
+              <a href="tel:+15614646222" class="inline-flex items-center gap-2 rounded-xl bg-[#00D4FF] px-5 py-3.5 font-semibold text-[#071427] hover:bg-[#2EE9C6] transition-colors">
+                <i data-lucide="phone" class="h-4 w-4"></i>Call (561) 464-6222
+              </a>
+              <a href="/portfolio/" class="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-5 py-3.5 font-semibold text-white hover:bg-white/10 transition-colors">
+                View Portfolio<i data-lucide="arrow-right" class="h-4 w-4"></i>
+              </a>
+            </div>
+            <div class="mt-10 grid grid-cols-3 gap-6 max-w-md">
+              <div>
+                <div class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">
+                  <span data-counter-to="639">639</span>
+                </div>
+                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Satisfied Clients</p>
+              </div>
+              <div>
+                <div class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">
+                  <span data-counter-to="303">303</span>
+                </div>
+                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Active Clients</p>
+              </div>
+              <div>
+                <div class="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-white">
+                  <span data-counter-to="12" data-counter-suffix="+">12+</span>
+                </div>
+                <p class="mt-1 text-xs uppercase tracking-wider text-white/55">Years In Business</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero visual card -->
+          <div class="reveal reveal-d1">
+            <div class="relative">
+              <div class="absolute -inset-2 rounded-3xl bg-gradient-to-br from-[#00D4FF]/30 to-[#2EE9C6]/10 blur-2xl opacity-60" aria-hidden="true"></div>
+              <div class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-3 sm:p-4 backdrop-blur-sm">
+                <div class="flex items-center gap-1.5 pl-2 pb-2">
+                  <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+                  <span class="ml-3 font-mono-tech text-[10px] text-white/40">webdesignfla.com</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-white/5">
+                    <img src="/images/commercial.jpg" alt="Commercial Building Services" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2"><span class="text-[11px] font-medium text-white/90">Commercial Building Services</span></div>
+                  </div>
+                  <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-white/5">
+                    <img src="/images/StallSavers.jpg" alt="Stall Savers" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2"><span class="text-[11px] font-medium text-white/90">Stall Savers</span></div>
+                  </div>
+                  <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-white/5">
+                    <img src="/images/addicted2Itely.jpg" alt="Addicted 2 Italy" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2"><span class="text-[11px] font-medium text-white/90">Addicted 2 Italy</span></div>
+                  </div>
+                  <div class="relative overflow-hidden rounded-lg aspect-[4/3] bg-white/5">
+                    <img src="/images/arielhomes.jpg" alt="Ariel Homes" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+                    <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2"><span class="text-[11px] font-medium text-white/90">Ariel Homes</span></div>
+                  </div>
+                </div>
+                <div class="mt-3 flex items-center justify-between rounded-lg bg-white/5 px-3 py-2 ring-1 ring-white/10">
+                  <div class="flex items-center gap-2 text-xs text-white/75">
+                    <i data-lucide="zap" class="h-3.5 w-3.5 text-[#00D4FF]"></i>
+                    <span>Average launch: 3–6 weeks</span>
+                  </div>
+                  <span class="font-mono-tech text-[10px] text-white/45">v2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section-accent-bg">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="reveal max-w-2xl">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Our Services</span>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[#0A192F]">Strategy, design, and growth — in one team.</h2>
+          <p class="mt-3 text-muted-foreground">Three connected disciplines. One accountable team. Hire us for any one — most clients hire us for all three because they compound.</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <div class="reveal">
+            <a href="/web-design/" class="group block h-full rounded-2xl border border-border bg-white p-7 shadow-[0_10px_30px_rgba(7,20,39,0.06)] hover:shadow-[0_18px_50px_rgba(7,20,39,0.12)] hover:-translate-y-0.5 transition-[transform,box-shadow] duration-300">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#0A192F] text-[#00D4FF]"><i data-lucide="globe" class="h-5 w-5"></i></span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-[#0A192F]">Web Design</h3>
+              <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Custom-designed, conversion-focused websites. We work iteratively with you, providing as many concepts as needed until you are extremely happy with the result.</p>
+              <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F6BFF]">Learn more<i data-lucide="arrow-right" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"></i></span>
+            </a>
+          </div>
+          <div class="reveal reveal-d1">
+            <a href="/seo/" class="group block h-full rounded-2xl border border-border bg-white p-7 shadow-[0_10px_30px_rgba(7,20,39,0.06)] hover:shadow-[0_18px_50px_rgba(7,20,39,0.12)] hover:-translate-y-0.5 transition-[transform,box-shadow] duration-300">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#0A192F] text-[#00D4FF]"><i data-lucide="search" class="h-5 w-5"></i></span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-[#0A192F]">SEO</h3>
+              <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Half science, half marketing. Our SEO blends internal optimization and authoritative external signals to drive qualified traffic that actually converts.</p>
+              <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F6BFF]">Learn more<i data-lucide="arrow-right" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"></i></span>
+            </a>
+          </div>
+          <div class="reveal reveal-d2">
+            <a href="/social/" class="group block h-full rounded-2xl border border-border bg-white p-7 shadow-[0_10px_30px_rgba(7,20,39,0.06)] hover:shadow-[0_18px_50px_rgba(7,20,39,0.12)] hover:-translate-y-0.5 transition-[transform,box-shadow] duration-300">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#0A192F] text-[#00D4FF]"><i data-lucide="share-2" class="h-5 w-5"></i></span>
+              <h3 class="mt-5 font-display text-xl font-semibold text-[#0A192F]">Social Media</h3>
+              <p class="mt-2 text-sm text-muted-foreground leading-relaxed">Strategy and content that builds awareness, drives engagement, and turns followers into customers across the channels that matter.</p>
+              <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F6BFF]">Learn more<i data-lucide="arrow-right" class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="border-y border-border bg-secondary/40">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="shield-check" class="h-4 w-4"></i></span>
+          <div>
+            <p class="font-display text-sm font-semibold text-[#0A192F]">Backed by a decade+</p>
+            <p class="text-sm text-muted-foreground">Reliable team, long-term partnerships.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="zap" class="h-4 w-4"></i></span>
+          <div>
+            <p class="font-display text-sm font-semibold text-[#0A192F]">Fast turnaround</p>
+            <p class="text-sm text-muted-foreground">Most sites launched in 3–6 weeks.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="search" class="h-4 w-4"></i></span>
+          <div>
+            <p class="font-display text-sm font-semibold text-[#0A192F]">SEO-first builds</p>
+            <p class="text-sm text-muted-foreground">Each page built to rank, not just look good.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="phone" class="h-4 w-4"></i></span>
+          <div>
+            <p class="font-display text-sm font-semibold text-[#0A192F]">Talk to a real person</p>
+            <p class="text-sm text-muted-foreground">No forms, no bots — call us directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="bg-background">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="reveal max-w-2xl">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Testimonials</span>
+          <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[#0A192F]">Real clients. Real results.</h2>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          <div class="reveal">
+            <article class="h-full rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(7,20,39,0.05)]">
+              <i data-lucide="quote" class="h-6 w-6 text-[#00D4FF]"></i>
+              <p class="mt-3 text-sm leading-relaxed text-foreground/80">"I'd like to thank you for taking my old website to a highest level possible! You handled everything in a professional manner — listening to my ideas, asking the right questions and coming to my business to help develop my site. Then adjusting it with me to fit my business desires. Money well spent! Feel free to use me for a recommendation anytime."</p>
+              <footer class="mt-5 flex items-center gap-3 border-t border-border pt-4">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0A192F] text-white font-display text-sm">S</span>
+                <div><p class="text-sm font-semibold text-[#0A192F]">Steve</p><p class="text-xs text-muted-foreground">Small Business Owner</p></div>
+              </footer>
+            </article>
+          </div>
+          <div class="reveal reveal-d1">
+            <article class="h-full rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(7,20,39,0.05)]">
+              <i data-lucide="quote" class="h-6 w-6 text-[#00D4FF]"></i>
+              <p class="mt-3 text-sm leading-relaxed text-foreground/80">"They rebuilt our site from scratch and our leads doubled within three months. The team is responsive, transparent and treats our project like their own."</p>
+              <footer class="mt-5 flex items-center gap-3 border-t border-border pt-4">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0A192F] text-white font-display text-sm">M</span>
+                <div><p class="text-sm font-semibold text-[#0A192F]">Maria</p><p class="text-xs text-muted-foreground">Operations Manager</p></div>
+              </footer>
+            </article>
+          </div>
+          <div class="reveal reveal-d2">
+            <article class="h-full rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(7,20,39,0.05)]">
+              <i data-lucide="quote" class="h-6 w-6 text-[#00D4FF]"></i>
+              <p class="mt-3 text-sm leading-relaxed text-foreground/80">"After years of struggling with template sites, we finally have a website we are proud of. Clean design, fast loading, and shows up on Google."</p>
+              <footer class="mt-5 flex items-center gap-3 border-t border-border pt-4">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0A192F] text-white font-display text-sm">J</span>
+                <div><p class="text-sm font-semibold text-[#0A192F]">James</p><p class="text-xs text-muted-foreground">Service Business Owner</p></div>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section class="bg-secondary/40 border-t border-border">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div class="reveal max-w-2xl">
+            <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Portfolio</span>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl font-semibold tracking-tight text-[#0A192F]">Custom websites with an emphasis on results-driven marketing.</h2>
+          </div>
+          <a href="/portfolio/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#2F6BFF] hover:underline">View all<i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+        </div>
+        <div class="mt-8 grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <!-- 9 featured portfolio items -->
+          <div class="reveal">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/commercial.jpg" alt="Commercial Building Services" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Commercial Building Services</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Commercial Building Services</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal reveal-d1">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/StallSavers.jpg" alt="Stall Savers" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Stall Savers</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Stall Savers</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal reveal-d2">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/addicted2Itely.jpg" alt="Addicted 2 Italy" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Addicted 2 Italy</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Addicted 2 Italy</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/arielhomes.jpg" alt="Ariel Homes" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Ariel Homes</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Ariel Homes</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal reveal-d1">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/integrity.jpg" alt="Integrity Garage Door Services" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Integrity Garage Door Services</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Integrity Garage Door Services</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal reveal-d2">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/OceansTreasure.jpg" alt="Oceans Treasure" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Oceans Treasure</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Oceans Treasure</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/IntegratedCable.jpg" alt="Integrated Cable Solutions" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Integrated Cable Solutions</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Integrated Cable Solutions</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal reveal-d1">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/SmithFence.jpg" alt="Smith Fence" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Smith Fence</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Smith Fence</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+          <div class="reveal reveal-d2">
+            <article class="group relative overflow-hidden rounded-xl border border-border bg-white">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-secondary"><img src="/images/Okeefe.jpg" alt="Okeefe's Tavern" loading="lazy" decoding="async" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" /></div>
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071427]/85 via-[#071427]/20 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity"><p class="font-display text-base font-semibold text-white">Okeefe's Tavern</p><p class="text-xs text-white/65">Web Design</p></div>
+              <div class="flex items-center justify-between border-t border-border p-4"><p class="font-display text-sm font-semibold text-[#0A192F]">Okeefe's Tavern</p><span class="text-xs text-muted-foreground">Web Design</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHONE CTA BAND -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div class="relative overflow-hidden rounded-2xl bg-[#0A192F] text-white shadow-[0_20px_60px_rgba(7,20,39,0.25)]">
+          <div class="absolute inset-0 blueprint-bg opacity-40" aria-hidden="true"></div>
+          <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#00D4FF]/20 blur-3xl" aria-hidden="true"></div>
+          <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#2EE9C6]/15 blur-3xl" aria-hidden="true"></div>
+          <div class="relative grid gap-6 p-8 sm:p-10 lg:p-12 md:grid-cols-[1.4fr_1fr] md:items-center">
+            <div>
+              <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">Free quote &middot; No contact form &middot; Just call</span>
+              <h3 class="mt-3 font-display text-2xl sm:text-3xl font-semibold tracking-tight">Ready to upgrade your website?</h3>
+              <p class="mt-2 text-white/75 max-w-xl text-sm sm:text-base">Get a free, no-pressure quote. Speak with a senior designer today.</p>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-2">
+              <a href="tel:+15614646222" class="inline-flex items-center gap-3 rounded-xl bg-[#00D4FF] px-5 py-4 text-[#071427] font-semibold hover:bg-[#2EE9C6] transition-colors">
+                <i data-lucide="phone" class="h-5 w-5"></i>
+                <span class="font-display text-lg">(561) 464-6222</span>
+              </a>
+              <span class="text-xs text-white/55">Mon–Fri 9am–6pm ET</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ───────────────────────────────────────────────── -->
+  <footer class="relative border-t border-white/10 bg-[#071427] text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <a href="/" class="inline-flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <p class="mt-4 max-w-md text-sm text-white/70 leading-relaxed">WebDesignFLA is a website design, development, and marketing agency headquartered in Jupiter, FL. For over a decade we have built and grown hundreds of business websites nationwide.</p>
+        <div class="mt-5 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Jupiter, FL</span>
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Nationwide Service</span>
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Established 2010</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-display text-sm font-semibold text-white">Explore</h4>
+        <ul class="mt-4 space-y-2">
+          <li><a href="/" class="text-sm text-white/70 hover:text-white transition-colors">Home</a></li>
+          <li><a href="/web-design/" class="text-sm text-white/70 hover:text-white transition-colors">Web Design</a></li>
+          <li><a href="/seo/" class="text-sm text-white/70 hover:text-white transition-colors">SEO</a></li>
+          <li><a href="/social/" class="text-sm text-white/70 hover:text-white transition-colors">Social Media</a></li>
+          <li><a href="/portfolio/" class="text-sm text-white/70 hover:text-white transition-colors">Portfolio</a></li>
+          <li><a href="/privacy-policy/" class="text-sm text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-sm font-semibold text-white">Get in touch</h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li>
+            <a href="tel:+15614646222" class="inline-flex items-start gap-2 text-white/85 hover:text-white">
+              <i data-lucide="phone" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i>
+              <span><span class="block font-semibold">(561) 464-6222</span><span class="text-xs text-white/60">Tap to call</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:admin@webdesignfla.com" class="inline-flex items-start gap-2 text-white/85 hover:text-white">
+              <i data-lucide="mail" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i>
+              <span>admin@webdesignfla.com</span>
+            </a>
+          </li>
+          <li class="inline-flex items-start gap-2 text-white/85">
+            <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i>
+            <span>103 South U.S. Hwy 1<br />Jupiter, FL 33477</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-white/55">&copy; <span id="footer-year"></span> WebDesignFLA. All rights reserved.</p>
+        <p class="text-xs text-white/55">Built with craft in Jupiter, FL.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
