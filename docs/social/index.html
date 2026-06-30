@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media Marketing | WebDesignFLA</title>
+  <meta name="description" content="Social media marketing that gains real attention and turns followers into customers. WebDesignFLA plans, produces, posts and measures — you get the leads." />
+  <link rel="canonical" href="https://webdesignfla.com/social/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+          colors: {
+            background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            border: 'hsl(var(--border))', input: 'hsl(var(--input))',
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            'mono-tech': ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="grain-overlay relative min-h-screen flex flex-col bg-background text-foreground">
+
+  <!-- HEADER -->
+  <header id="site-header" class="sticky top-0 z-50 w-full border-b border-white/5 bg-[#0A192F] transition-all duration-300">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div id="header-inner" class="flex items-center justify-between h-16 transition-all duration-300">
+        <a ../ class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-white text-base sm:text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7">
+          <a ../ data-nav-link="home" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Home<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../web-design/" data-nav-link="web-design" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Web Design<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../seo/" data-nav-link="seo" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">SEO<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../social/" data-nav-link="social" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Social Media<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../portfolio/" data-nav-link="portfolio" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Portfolio<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="tel:+15614646222" class="hidden sm:inline-flex h-9 items-center gap-2 rounded-lg bg-[#00D4FF] px-3 text-sm font-semibold text-[#071427] hover:bg-[#2EE9C6] transition-colors">
+            <i data-lucide="phone" class="h-4 w-4"></i>(561) 464-6222
+          </a>
+          <a href="tel:+15614646222" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#00D4FF] text-[#071427]" aria-label="Call us">
+            <i data-lucide="phone" class="h-4 w-4"></i>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white hover:bg-white/10" aria-label="Open menu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-[60]" aria-hidden="true"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#0A192F] text-white z-[70] border-l border-white/10">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <span class="font-display text-lg font-semibold">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        <button id="mobile-menu-close" class="inline-flex h-8 w-8 items-center justify-center rounded-lg hover:bg-white/10" aria-label="Close menu">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <a ../ class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Home</a>
+        <a href="../web-design/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Web Design</a>
+        <a href="../seo/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">SEO</a>
+        <a href="../social/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Social Media</a>
+        <a href="../portfolio/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Portfolio</a>
+        <a href="tel:+15614646222" class="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-[#00D4FF] px-4 py-3 font-semibold text-[#071427]">
+          <i data-lucide="phone" class="h-4 w-4"></i>Call (561) 464-6222
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-1 relative z-[2]">
+
+    <!-- PAGE HERO -->
+    <section class="relative overflow-hidden hero-bg text-white">
+      <div class="absolute inset-0 blueprint-bg opacity-30" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <nav aria-label="Breadcrumb" class="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-white/65">
+          <a ../ class="inline-flex items-center gap-1 hover:text-white"><i data-lucide="home" class="h-3.5 w-3.5"></i>Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-white/40"></i>
+          <span class="text-white/90">Social Media</span>
+        </nav>
+        <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">Social Media</span>
+        <h1 class="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">Social media that earns attention — and customers.</h1>
+        <p class="mt-5 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">Social media marketing is the process of gaining website traffic or attention through social media platforms. Our programs create content that attracts attention and encourages readers to share it with their networks — lifting both reach and revenue.</p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20 grid gap-10 lg:grid-cols-[1.6fr_1fr]">
+      <div class="space-y-12">
+
+        <!-- Why it matters -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Why it matters</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">WebDesignFLA brings your social media campaign to the next level.</h2>
+          <p class="mt-3 text-muted-foreground leading-relaxed max-w-3xl">Social media is no longer optional. It is where new customers research you before they ever pick up the phone. We focus on the channels that drive real outcomes for your business — not vanity metrics.</p>
+          <ul class="mt-5 grid gap-3 sm:grid-cols-2">
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80">
+              <i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i>
+              <span>Increase awareness of your products or services with the right audience.</span>
+            </li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80">
+              <i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i>
+              <span>Build trust through consistency, transparency and real customer voices.</span>
+            </li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80">
+              <i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i>
+              <span>Drive qualified traffic from social into your website and phone line.</span>
+            </li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80">
+              <i data-lucide="check-circle-2" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i>
+              <span>Compound earned attention into a long-term, defensible brand.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">What we do</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">Strategy, content, posting, reporting — end-to-end.</h2>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2">
+            <div class="h-full rounded-xl border border-border bg-white p-5">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="megaphone" class="h-5 w-5"></i></span>
+              <h3 class="mt-3 font-display text-base font-semibold text-[#0A192F]">Brand Strategy</h3>
+              <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Voice, audience, positioning and a content roadmap that ladders up to your business goals.</p>
+            </div>
+            <div class="h-full rounded-xl border border-border bg-white p-5">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="sparkles" class="h-5 w-5"></i></span>
+              <h3 class="mt-3 font-display text-base font-semibold text-[#0A192F]">Content Production</h3>
+              <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Photo, short-form video, graphics and copy — built for the platform, not recycled.</p>
+            </div>
+            <div class="h-full rounded-xl border border-border bg-white p-5">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="calendar" class="h-5 w-5"></i></span>
+              <h3 class="mt-3 font-display text-base font-semibold text-[#0A192F]">Posting &amp; Community</h3>
+              <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Consistent posting cadence, comment moderation, and DM triage.</p>
+            </div>
+            <div class="h-full rounded-xl border border-border bg-white p-5">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#0A192F] text-[#00D4FF]"><i data-lucide="bar-chart-3" class="h-5 w-5"></i></span>
+              <h3 class="mt-3 font-display text-base font-semibold text-[#0A192F]">Reporting &amp; Iteration</h3>
+              <p class="mt-1.5 text-sm text-muted-foreground leading-relaxed">Monthly performance reports with insights you can act on, not vanity metrics.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Platforms -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Channels we manage</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">We focus on the platforms where your customers actually are.</h2>
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-xl border border-border bg-white p-5">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#EEF4FA] text-[#0A192F]"><i data-lucide="facebook" class="h-5 w-5"></i></span>
+                <h3 class="font-display text-base font-semibold text-[#0A192F]">Facebook</h3>
+              </div>
+              <p class="mt-2 text-sm text-muted-foreground">Community building, events, and reputation management.</p>
+            </div>
+            <div class="rounded-xl border border-border bg-white p-5">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#EEF4FA] text-[#0A192F]"><i data-lucide="instagram" class="h-5 w-5"></i></span>
+                <h3 class="font-display text-base font-semibold text-[#0A192F]">Instagram</h3>
+              </div>
+              <p class="mt-2 text-sm text-muted-foreground">Visual storytelling, reels, and lifestyle proof.</p>
+            </div>
+            <div class="rounded-xl border border-border bg-white p-5">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#EEF4FA] text-[#0A192F]"><i data-lucide="linkedin" class="h-5 w-5"></i></span>
+                <h3 class="font-display text-base font-semibold text-[#0A192F]">LinkedIn</h3>
+              </div>
+              <p class="mt-2 text-sm text-muted-foreground">B2B authority and lead-gen content.</p>
+            </div>
+            <div class="rounded-xl border border-border bg-white p-5">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#EEF4FA] text-[#0A192F]"><i data-lucide="music-2" class="h-5 w-5"></i></span>
+                <h3 class="font-display text-base font-semibold text-[#0A192F]">TikTok</h3>
+              </div>
+              <p class="mt-2 text-sm text-muted-foreground">Short-form video reach and discovery.</p>
+            </div>
+            <div class="rounded-xl border border-border bg-white p-5">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#EEF4FA] text-[#0A192F]"><i data-lucide="youtube" class="h-5 w-5"></i></span>
+                <h3 class="font-display text-base font-semibold text-[#0A192F]">YouTube</h3>
+              </div>
+              <p class="mt-2 text-sm text-muted-foreground">Long-tail SEO and product education.</p>
+            </div>
+            <div class="rounded-xl border border-border bg-white p-5">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#EEF4FA] text-[#0A192F]"><i data-lucide="message-circle" class="h-5 w-5"></i></span>
+                <h3 class="font-display text-base font-semibold text-[#0A192F]">X (Twitter)</h3>
+              </div>
+              <p class="mt-2 text-sm text-muted-foreground">Real-time conversation and PR amplification.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="lg:sticky lg:top-24 self-start">
+        <div class="rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(7,20,39,0.06)]">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Get a free quote</span>
+          <h3 class="mt-2 font-display text-xl font-semibold text-[#0A192F]">Talk to a senior designer</h3>
+          <p class="mt-2 text-sm text-muted-foreground">No forms. Just a real conversation about your project, timeline and budget.</p>
+          <a href="tel:+15614646222" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#0A192F] px-4 py-3 font-semibold text-white hover:bg-[#0E2342] transition-colors">
+            <i data-lucide="phone" class="h-4 w-4 text-[#00D4FF]"></i>(561) 464-6222
+          </a>
+          <ul class="mt-5 space-y-2 text-sm text-muted-foreground">
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Strategy + content production included</span></li>
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Posting + community management</span></li>
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Honest reporting, not vanity metrics</span></li>
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Integrated with your website + SEO</span></li>
+          </ul>
+          <div class="mt-5 border-t border-border pt-4 text-xs text-muted-foreground">103 South U.S. Hwy 1<br />Jupiter, FL 33477</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PHONE CTA BAND -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div class="relative overflow-hidden rounded-2xl bg-[#0A192F] text-white shadow-[0_20px_60px_rgba(7,20,39,0.25)]">
+          <div class="absolute inset-0 blueprint-bg opacity-40" aria-hidden="true"></div>
+          <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#00D4FF]/20 blur-3xl" aria-hidden="true"></div>
+          <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#2EE9C6]/15 blur-3xl" aria-hidden="true"></div>
+          <div class="relative grid gap-6 p-8 sm:p-10 lg:p-12 md:grid-cols-[1.4fr_1fr] md:items-center">
+            <div>
+              <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">Free quote &middot; No contact form &middot; Just call</span>
+              <h3 class="mt-3 font-display text-2xl sm:text-3xl font-semibold tracking-tight">Ready to grow your audience the right way?</h3>
+              <p class="mt-2 text-white/75 max-w-xl text-sm sm:text-base">Call us and we will sketch a 90-day plan that fits your budget.</p>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-2">
+              <a href="tel:+15614646222" class="inline-flex items-center gap-3 rounded-xl bg-[#00D4FF] px-5 py-4 text-[#071427] font-semibold hover:bg-[#2EE9C6] transition-colors">
+                <i data-lucide="phone" class="h-5 w-5"></i>
+                <span class="font-display text-lg">(561) 464-6222</span>
+              </a>
+              <span class="text-xs text-white/55">Mon–Fri 9am–6pm ET</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative border-t border-white/10 bg-[#071427] text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <a ../ class="inline-flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <p class="mt-4 max-w-md text-sm text-white/70 leading-relaxed">WebDesignFLA is a website design, development, and marketing agency headquartered in Jupiter, FL. For over a decade we have built and grown hundreds of business websites nationwide.</p>
+        <div class="mt-5 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Jupiter, FL</span>
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Nationwide Service</span>
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Established 2010</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-display text-sm font-semibold text-white">Explore</h4>
+        <ul class="mt-4 space-y-2">
+          <li><a ../ class="text-sm text-white/70 hover:text-white transition-colors">Home</a></li>
+          <li><a href="../web-design/" class="text-sm text-white/70 hover:text-white transition-colors">Web Design</a></li>
+          <li><a href="../seo/" class="text-sm text-white/70 hover:text-white transition-colors">SEO</a></li>
+          <li><a href="../social/" class="text-sm text-white/70 hover:text-white transition-colors">Social Media</a></li>
+          <li><a href="../portfolio/" class="text-sm text-white/70 hover:text-white transition-colors">Portfolio</a></li>
+          <li><a href="../privacy-policy/" class="text-sm text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-sm font-semibold text-white">Get in touch</h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="tel:+15614646222" class="inline-flex items-start gap-2 text-white/85 hover:text-white"><i data-lucide="phone" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span><span class="block font-semibold">(561) 464-6222</span><span class="text-xs text-white/60">Tap to call</span></span></a></li>
+          <li><a href="mailto:admin@webdesignfla.com" class="inline-flex items-start gap-2 text-white/85 hover:text-white"><i data-lucide="mail" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span>admin@webdesignfla.com</span></a></li>
+          <li class="inline-flex items-start gap-2 text-white/85"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span>103 South U.S. Hwy 1<br />Jupiter, FL 33477</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-white/55">&copy; <span id="footer-year"></span> WebDesignFLA. All rights reserved.</p>
+        <p class="text-xs text-white/55">Built with craft in Jupiter, FL.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

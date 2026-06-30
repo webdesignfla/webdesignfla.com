@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Services | WebDesignFLA</title>
+  <meta name="description" content="Half science, half marketing. WebDesignFLA designs SEO campaigns that combine on-page optimization, technical SEO, and authoritative external links to drive qualified, organic traffic." />
+  <link rel="canonical" href="https://webdesignfla.com/seo/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+          colors: {
+            background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            border: 'hsl(var(--border))',
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            'mono-tech': ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="grain-overlay relative min-h-screen flex flex-col bg-background text-foreground">
+
+  <!-- HEADER -->
+  <header id="site-header" class="sticky top-0 z-50 w-full border-b border-white/5 bg-[#0A192F] transition-all duration-300">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div id="header-inner" class="flex items-center justify-between h-16 transition-all duration-300">
+        <a ../ class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-white text-base sm:text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7">
+          <a ../ data-nav-link="home" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Home<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../web-design/" data-nav-link="web-design" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Web Design<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../seo/" data-nav-link="seo" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">SEO<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../social/" data-nav-link="social" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Social Media<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+          <a href="../portfolio/" data-nav-link="portfolio" class="relative text-sm font-medium text-white/70 hover:text-white transition-colors">Portfolio<span class="nav-active-bar absolute -bottom-1.5 left-0 h-[2px] w-full bg-[#00D4FF] rounded-full hidden"></span></a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="tel:+15614646222" class="hidden sm:inline-flex h-9 items-center gap-2 rounded-lg bg-[#00D4FF] px-3 text-sm font-semibold text-[#071427] hover:bg-[#2EE9C6] transition-colors">
+            <i data-lucide="phone" class="h-4 w-4"></i>(561) 464-6222
+          </a>
+          <a href="tel:+15614646222" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#00D4FF] text-[#071427]" aria-label="Call us">
+            <i data-lucide="phone" class="h-4 w-4"></i>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white hover:bg-white/10" aria-label="Open menu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-[60]" aria-hidden="true"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#0A192F] text-white z-[70] border-l border-white/10">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <span class="font-display text-lg font-semibold">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        <button id="mobile-menu-close" class="inline-flex h-8 w-8 items-center justify-center rounded-lg hover:bg-white/10" aria-label="Close menu">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <a ../ class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Home</a>
+        <a href="../web-design/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Web Design</a>
+        <a href="../seo/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">SEO</a>
+        <a href="../social/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Social Media</a>
+        <a href="../portfolio/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Portfolio</a>
+        <a href="tel:+15614646222" class="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-[#00D4FF] px-4 py-3 font-semibold text-[#071427]">
+          <i data-lucide="phone" class="h-4 w-4"></i>Call (561) 464-6222
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-1 relative z-[2]">
+
+    <!-- PAGE HERO -->
+    <section class="relative overflow-hidden hero-bg text-white">
+      <div class="absolute inset-0 blueprint-bg opacity-30" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <nav aria-label="Breadcrumb" class="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-white/65">
+          <a ../ class="inline-flex items-center gap-1 hover:text-white"><i data-lucide="home" class="h-3.5 w-3.5"></i>Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-white/40"></i>
+          <span class="text-white/90">SEO</span>
+        </nav>
+        <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">Search Engine Optimization</span>
+        <h1 class="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">Half science. Half marketing. All measurable.</h1>
+        <p class="mt-5 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">Search engines are the SINGLE most important source of new visitors (qualified customers) to your website. Our SEO program designs, implements and monitors campaigns to win the only competition that matters — the one in front of your buyers.</p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20 grid gap-10 lg:grid-cols-[1.6fr_1fr]">
+      <div class="space-y-12">
+
+        <!-- What SEO really is -->
+        <div class="reveal">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">What SEO really is</h2>
+          <p class="mt-3 text-muted-foreground leading-relaxed">SEO never rests, much like your competition, and requires in-depth knowledge of marketing, technology, search engines and customer behavior. It takes a tremendous amount of time and expertise to design, implement and monitor a successful SEO campaign.</p>
+          <p class="mt-3 text-muted-foreground leading-relaxed">You can absolutely do it yourself if you have the time to invest and your business can wait years to see the results. In the long run it is much better for your business if you concentrate on making it WOW your customers and let the experts handle your Internet marketing. People are looking for the best business to fill their needs — there is no room for mediocre in today's fast-paced digital society. Your competition is only a click away, so make sure you shine.</p>
+          <p class="mt-3 text-muted-foreground leading-relaxed">If your website is mediocre, start with a redesign. Driving traffic to a website that doesn't convey you are the best in your field does nothing for your bottom line.</p>
+        </div>
+
+        <!-- Internal vs External -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">The 25 / 75 rule</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">Internal (25%) vs. External SEO (75%)</h2>
+          <p class="mt-3 text-muted-foreground max-w-3xl">Search engine optimization must be done on your website (Internal) and throughout the internet (External) via directory links, blog links, social networking and more. Internal SEO should be done during the planning phase of website development. External SEO is planned during development and continues forever.</p>
+          <div class="mt-6 grid gap-5 md:grid-cols-2">
+            <div class="p-6 rounded-lg border border-border bg-white border-l-4 border-l-[#00D4FF]">
+              <div class="flex items-center gap-2 text-[#0A192F]">
+                <i data-lucide="target" class="h-5 w-5"></i>
+                <h3 class="font-display text-lg font-semibold">On-page SEO</h3>
+              </div>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Metadata — page title, meta description, structured tags</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Heading analysis and proper H1–H6 hierarchy</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Image naming, alt text, and compression</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Interior page analysis and internal linking</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Readability, page speed, and Core Web Vitals</span></li>
+              </ul>
+            </div>
+            <div class="p-6 rounded-lg border border-border bg-white border-l-4 border-l-[#2F6BFF]">
+              <div class="flex items-center gap-2 text-[#0A192F]">
+                <i data-lucide="link-2" class="h-5 w-5"></i>
+                <h3 class="font-display text-lg font-semibold">Off-page SEO</h3>
+              </div>
+              <ul class="mt-4 space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Domain history &amp; registration trust signals</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Google indexed pages and crawl frequency</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Bing indexed pages and crawl frequency</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Inbound link profile and anchor diversity</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Authoritative directory &amp; citation building</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Blog analysis and outreach</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Social signals &amp; brand presence</span></li>
+              </ul>
+            </div>
+            <div class="p-6 rounded-lg border border-border bg-white border-l-4 border-l-[#0A192F] md:col-span-2">
+              <div class="flex items-center gap-2 text-[#0A192F]">
+                <i data-lucide="search" class="h-5 w-5"></i>
+                <h3 class="font-display text-lg font-semibold">Visitor experience</h3>
+              </div>
+              <ul class="mt-4 grid gap-2 text-sm sm:grid-cols-3">
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Clear calls to action on every page</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Honest conversion paths (phone, quote)</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 text-[#16A34A] shrink-0"></i><span class="text-foreground/80">Overall experience and trust review</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Keyword research -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Keyword Research</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">Finding the top 10 phrases that actually buy</h2>
+          <p class="mt-3 text-muted-foreground max-w-3xl">SEO starts with research. What are your customers actually looking for? We perform keyword research for every page (product or service) on your website. Keywords drive both internal and external SEO and are derived from a base phrase, a brainstorming session, and competitor analysis.</p>
+        </div>
+
+        <!-- SEO Copywriting -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">SEO Copywriting</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">From keywords to power copy</h2>
+          <p class="mt-3 text-muted-foreground max-w-3xl">Once a set of keyword phrases is established, your current content and the keyword research are combined into power copy. That text is added to your website pages — written for humans first, machines second.</p>
+        </div>
+
+        <!-- Traffic chart -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Compounding Results</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">What a healthy organic curve looks like</h2>
+          <p class="mt-3 text-muted-foreground max-w-3xl">This is an illustrative example of the kind of organic traffic curve we aim for over 12 months — steady gains compounding into meaningful business outcomes. Real numbers depend on your industry and competition.</p>
+          <div class="mt-6 p-4 sm:p-6 rounded-lg border border-border bg-white">
+            <div class="flex items-center gap-2 text-[#0A192F]">
+              <i data-lucide="trending-up" class="h-5 w-5 text-[#00D4FF]"></i>
+              <span class="font-display text-sm font-semibold">Illustrative organic sessions / month</span>
+            </div>
+            <div class="mt-4 h-56 sm:h-64">
+              <canvas id="seo-traffic-chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Snake oil callout -->
+        <div class="reveal">
+          <div class="p-6 rounded-lg border border-border bg-[#FFFBEB]/50 border-l-4 border-l-[#F59E0B]">
+            <div class="flex items-center gap-2 text-[#0A192F]">
+              <i data-lucide="alert-triangle" class="h-5 w-5 text-[#F59E0B]"></i>
+              <h3 class="font-display text-lg font-semibold">Beware of the snake oil salesman</h3>
+            </div>
+            <p class="mt-3 text-sm text-foreground/80 leading-relaxed">You have all received the famous email claiming "top of Google in 24 hours guaranteed." Logical thinking should immediately make you question such a claim. The only company that could guarantee that is running pay-per-click ads — not the same as the free, organic search results. The only way to earn top placement on organic results is a strong SEO strategy and a website built to be read by the search engines. SEO is labor-intensive and can take months for results to fully show.</p>
+          </div>
+        </div>
+
+        <!-- SEO Facts -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">SEO Facts</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">Things every business owner should know</h2>
+          <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO is a sub-set of Search Engine Marketing. There is both internal and external SEO.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO is an important factor in the success of a Web site regardless of its size.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO delivers quality traffic for a maximum return on investment.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO is the way to pull massive amounts of "organic" free traffic.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO produces a higher rate of return (ROI) than almost any other form of advertising or marketing.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO without targeting the right keywords &amp; key phrases is a waste of keystrokes.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO is such a technical and ever-changing field that it demands specialization.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>SEO is the process of improving a web site for higher search engine rankings.</span></li>
+            <li class="flex items-start gap-2 rounded-lg border border-border bg-white p-3 text-sm text-foreground/80 sm:col-span-2"><i data-lucide="circle-check" class="mt-0.5 h-4 w-4 shrink-0 text-[#16A34A]"></i><span>85% of high income and highly educated adults use search engines as their primary research tool.</span></li>
+          </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div class="reveal">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">FAQ</span>
+          <h2 class="mt-2 font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">Common questions about SEO</h2>
+          <div class="accordion mt-4 w-full divide-y divide-border rounded-lg border border-border bg-white overflow-hidden">
+            <div>
+              <button class="accordion-trigger flex w-full items-center justify-between px-5 py-4 text-left font-display text-sm font-semibold text-[#0A192F] hover:bg-secondary/50 transition-colors" aria-expanded="false" aria-controls="faq-1">
+                How long until I see results?
+                <i data-lucide="chevron-down" class="accordion-chevron h-4 w-4 shrink-0 text-muted-foreground"></i>
+              </button>
+              <div id="faq-1" class="accordion-content"><p class="px-5 pb-4 text-sm text-muted-foreground">Most clients see meaningful movement in 3–6 months and compounding results from month 6 onward. Local SEO can move faster.</p></div>
+            </div>
+            <div>
+              <button class="accordion-trigger flex w-full items-center justify-between px-5 py-4 text-left font-display text-sm font-semibold text-[#0A192F] hover:bg-secondary/50 transition-colors" aria-expanded="false" aria-controls="faq-2">
+                Will you guarantee a #1 ranking?
+                <i data-lucide="chevron-down" class="accordion-chevron h-4 w-4 shrink-0 text-muted-foreground"></i>
+              </button>
+              <div id="faq-2" class="accordion-content"><p class="px-5 pb-4 text-sm text-muted-foreground">No reputable agency will guarantee specific positions on organic results. Anyone who does is selling pay-per-click in disguise.</p></div>
+            </div>
+            <div>
+              <button class="accordion-trigger flex w-full items-center justify-between px-5 py-4 text-left font-display text-sm font-semibold text-[#0A192F] hover:bg-secondary/50 transition-colors" aria-expanded="false" aria-controls="faq-3">
+                Do I need a new website for SEO to work?
+                <i data-lucide="chevron-down" class="accordion-chevron h-4 w-4 shrink-0 text-muted-foreground"></i>
+              </button>
+              <div id="faq-3" class="accordion-content"><p class="px-5 pb-4 text-sm text-muted-foreground">Not always. If your site is structurally sound, we can optimize the existing one. If it's mediocre, a redesign is usually the highest-ROI starting point.</p></div>
+            </div>
+            <div>
+              <button class="accordion-trigger flex w-full items-center justify-between px-5 py-4 text-left font-display text-sm font-semibold text-[#0A192F] hover:bg-secondary/50 transition-colors" aria-expanded="false" aria-controls="faq-4">
+                Which search engines do you optimize for?
+                <i data-lucide="chevron-down" class="accordion-chevron h-4 w-4 shrink-0 text-muted-foreground"></i>
+              </button>
+              <div id="faq-4" class="accordion-content"><p class="px-5 pb-4 text-sm text-muted-foreground">The big three: Google, Yahoo and Bing. Most others either pull from these or have small market share.</p></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="lg:sticky lg:top-24 self-start">
+        <div class="rounded-2xl border border-border bg-white p-6 shadow-[0_10px_30px_rgba(7,20,39,0.06)]">
+          <span class="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#2F6BFF]">Get a free quote</span>
+          <h3 class="mt-2 font-display text-xl font-semibold text-[#0A192F]">Talk to a senior designer</h3>
+          <p class="mt-2 text-sm text-muted-foreground">No forms. Just a real conversation about your project, timeline and budget.</p>
+          <a href="tel:+15614646222" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#0A192F] px-4 py-3 font-semibold text-white hover:bg-[#0E2342] transition-colors">
+            <i data-lucide="phone" class="h-4 w-4 text-[#00D4FF]"></i>(561) 464-6222
+          </a>
+          <ul class="mt-5 space-y-2 text-sm text-muted-foreground">
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Keyword + competitor research included</span></li>
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>On-page + technical fixes</span></li>
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Authoritative link building</span></li>
+            <li class="flex gap-2"><span class="mt-2 inline-block h-1.5 w-1.5 rounded-full bg-[#00D4FF] shrink-0"></span><span>Monthly transparent reporting</span></li>
+          </ul>
+          <div class="mt-5 border-t border-border pt-4 text-xs text-muted-foreground">103 South U.S. Hwy 1<br />Jupiter, FL 33477</div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PHONE CTA BAND -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div class="relative overflow-hidden rounded-2xl bg-[#0A192F] text-white shadow-[0_20px_60px_rgba(7,20,39,0.25)]">
+          <div class="absolute inset-0 blueprint-bg opacity-40" aria-hidden="true"></div>
+          <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[#00D4FF]/20 blur-3xl" aria-hidden="true"></div>
+          <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[#2EE9C6]/15 blur-3xl" aria-hidden="true"></div>
+          <div class="relative grid gap-6 p-8 sm:p-10 lg:p-12 md:grid-cols-[1.4fr_1fr] md:items-center">
+            <div>
+              <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">Free quote &middot; No contact form &middot; Just call</span>
+              <h3 class="mt-3 font-display text-2xl sm:text-3xl font-semibold tracking-tight">Contact WebDesignFLA today for a FREE SEO quote.</h3>
+              <p class="mt-2 text-white/75 max-w-xl text-sm sm:text-base">Tell us your top services and your geography — we will tell you what's realistic.</p>
+            </div>
+            <div class="flex flex-col items-start md:items-end gap-2">
+              <a href="tel:+15614646222" class="inline-flex items-center gap-3 rounded-xl bg-[#00D4FF] px-5 py-4 text-[#071427] font-semibold hover:bg-[#2EE9C6] transition-colors">
+                <i data-lucide="phone" class="h-5 w-5"></i>
+                <span class="font-display text-lg">(561) 464-6222</span>
+              </a>
+              <span class="text-xs text-white/55">Mon–Fri 9am–6pm ET</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="relative border-t border-white/10 bg-[#071427] text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-4">
+      <div class="md:col-span-2">
+        <a ../ class="inline-flex items-center gap-2">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <p class="mt-4 max-w-md text-sm text-white/70 leading-relaxed">WebDesignFLA is a website design, development, and marketing agency headquartered in Jupiter, FL. For over a decade we have built and grown hundreds of business websites nationwide.</p>
+        <div class="mt-5 flex items-center gap-2 text-xs">
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Jupiter, FL</span>
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Nationwide Service</span>
+          <span class="inline-flex items-center rounded-full bg-white/5 px-2.5 py-1 ring-1 ring-white/10">Established 2010</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-display text-sm font-semibold text-white">Explore</h4>
+        <ul class="mt-4 space-y-2">
+          <li><a ../ class="text-sm text-white/70 hover:text-white transition-colors">Home</a></li>
+          <li><a href="../web-design/" class="text-sm text-white/70 hover:text-white transition-colors">Web Design</a></li>
+          <li><a href="../seo/" class="text-sm text-white/70 hover:text-white transition-colors">SEO</a></li>
+          <li><a href="../social/" class="text-sm text-white/70 hover:text-white transition-colors">Social Media</a></li>
+          <li><a href="../portfolio/" class="text-sm text-white/70 hover:text-white transition-colors">Portfolio</a></li>
+          <li><a href="../privacy-policy/" class="text-sm text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-display text-sm font-semibold text-white">Get in touch</h4>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="tel:+15614646222" class="inline-flex items-start gap-2 text-white/85 hover:text-white"><i data-lucide="phone" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span><span class="block font-semibold">(561) 464-6222</span><span class="text-xs text-white/60">Tap to call</span></span></a></li>
+          <li><a href="mailto:admin@webdesignfla.com" class="inline-flex items-start gap-2 text-white/85 hover:text-white"><i data-lucide="mail" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span>admin@webdesignfla.com</span></a></li>
+          <li class="inline-flex items-start gap-2 text-white/85"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span>103 South U.S. Hwy 1<br />Jupiter, FL 33477</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-white/55">&copy; <span id="footer-year"></span> WebDesignFLA. All rights reserved.</p>
+        <p class="text-xs text-white/55">Built with craft in Jupiter, FL.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    (function () {
+      var ctx = document.getElementById('seo-traffic-chart');
+      if (!ctx) return;
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+          datasets: [{
+            data: [240,310,380,470,560,690,820,970,1120,1310,1520,1760],
+            borderColor: '#0A192F',
+            borderWidth: 2.5,
+            pointBackgroundColor: '#00D4FF',
+            pointRadius: 3,
+            pointHoverRadius: 5,
+            pointHoverBackgroundColor: '#2F6BFF',
+            tension: 0.4,
+            fill: false,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return ' ' + c.parsed.y + ' sessions'; } } } },
+          scales: {
+            x: { grid: { color: '#D7E2EE' }, ticks: { color: '#4B5563', font: { size: 12 } } },
+            y: { grid: { color: '#D7E2EE' }, ticks: { color: '#4B5563', font: { size: 12 } } }
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

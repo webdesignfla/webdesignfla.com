@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | WebDesignFLA</title>
+  <meta name="description" content="Privacy policy and terms of use for WebDesignFLA. Your data is used only to enhance our services and is never sold or shared with third parties." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+          colors: {
+            background: 'hsl(var(--background))', foreground: 'hsl(var(--foreground))',
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            border: 'hsl(var(--border))',
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            'mono-tech': ['IBM Plex Mono', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="grain-overlay relative min-h-screen flex flex-col bg-background text-foreground">
+
+  <header id="site-header" class="sticky top-0 z-50 w-full border-b border-white/5 bg-[#0A192F] transition-all duration-300">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div id="header-inner" class="flex items-center justify-between h-16 transition-all duration-300">
+        <a ../ class="flex items-center gap-2">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+          <span class="font-display text-white text-base sm:text-lg font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7">
+          <a ../ class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors" data-path="/">Home</a>
+          <a href="../web-design/" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors" data-path="/web-design/">Web Design</a>
+          <a href="../seo/" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors" data-path="/seo/">SEO</a>
+          <a href="../social/" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors" data-path="/social/">Social Media</a>
+          <a href="../portfolio/" class="nav-link relative text-sm font-medium text-white/70 hover:text-white transition-colors" data-path="/portfolio/">Portfolio</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="tel:+15614646222" class="hidden sm:inline-flex h-9 items-center gap-2 rounded-lg bg-[#00D4FF] px-3 text-sm font-semibold text-[#071427] hover:bg-[#2EE9C6] transition-colors">
+            <i data-lucide="phone" class="h-4 w-4"></i>(561) 464-6222
+          </a>
+          <a href="tel:+15614646222" class="sm:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#00D4FF] text-[#071427]" aria-label="Call us">
+            <i data-lucide="phone" class="h-4 w-4"></i>
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-lg text-white hover:bg-white/10" aria-label="Open menu">
+            <i data-lucide="menu" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay" class="fixed inset-0 z-[60]" aria-hidden="true"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#0A192F] text-white z-[70] border-l border-white/10">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-6">
+        <span class="font-display text-lg font-semibold">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+        <button id="mobile-menu-close" class="inline-flex h-8 w-8 items-center justify-center rounded-lg hover:bg-white/10" aria-label="Close menu">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <a ../ class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Home</a>
+        <a href="../web-design/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Web Design</a>
+        <a href="../seo/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">SEO</a>
+        <a href="../social/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Social Media</a>
+        <a href="../portfolio/" class="mobile-nav-link rounded-md px-3 py-3 text-base font-medium text-white/80 hover:bg-white/5 transition-colors">Portfolio</a>
+        <a href="tel:+15614646222" class="mt-4 inline-flex items-center justify-center gap-2 rounded-lg bg-[#00D4FF] px-4 py-3 font-semibold text-[#071427]">
+          <i data-lucide="phone" class="h-4 w-4"></i>Call (561) 464-6222
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-1 relative z-[2]">
+
+    <!-- PAGE HERO -->
+    <section class="relative overflow-hidden hero-bg text-white">
+      <div class="absolute inset-0 blueprint-bg opacity-30" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <nav aria-label="Breadcrumb" class="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-white/65">
+          <a ../ class="inline-flex items-center gap-1 hover:text-white"><i data-lucide="home" class="h-3.5 w-3.5"></i>Home</a>
+          <i data-lucide="chevron-right" class="h-3.5 w-3.5 text-white/40"></i>
+          <span class="text-white/90">Privacy Policy</span>
+        </nav>
+        <span class="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/15">Legal</span>
+        <h1 class="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">Privacy Policy &amp; Terms</h1>
+        <p class="mt-5 max-w-2xl text-base sm:text-lg text-white/75 leading-relaxed">By accessing or using our website, you agree to be bound by these terms and conditions. If you do not agree with any part of these terms, please do not use our website.</p>
+      </div>
+    </section>
+
+    <!-- POLICY CONTENT -->
+    <section class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20">
+      <p class="text-sm text-muted-foreground">Welcome to WebDesignFLA. By accessing or using our website, you agree to be bound by these terms and conditions ("Terms"). If you do not agree with any part of these Terms, please do not use our website.</p>
+      <hr class="my-8 border-border" />
+      <div class="space-y-10">
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">1. Use of Website</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>1.1 This website is intended to provide information about web design, development and marketing services and related products.</p>
+            <p>1.2 You agree to use this site only for lawful purposes and in a manner that does not infringe the rights of, or restrict or inhibit the use and enjoyment of this site by any third party.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">2. Intellectual Property</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>2.1 The content, layout, design, data, databases and graphics on this website are protected by intellectual property laws and are owned by WebDesignFLA or its licensors, unless otherwise stated.</p>
+            <p>2.2 You may not reproduce, download, transmit or retransmit, manipulate or store on any other website or electronic retrieval system any material from this site without prior written consent.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">3. Liability</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>3.1 WebDesignFLA does not guarantee the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose.</p>
+            <p>3.2 You acknowledge that such information and materials may contain inaccuracies or errors, and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">4. Links to Other Websites</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>4.1 This website may include links to external websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s).</p>
+            <p>4.2 We have no responsibility for the content of the linked website(s).</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">5. Changes to Terms</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>5.1 WebDesignFLA reserves the right to change these terms at any time by posting changes online. Your continued use of this site after changes are posted constitutes your acceptance of this agreement as modified.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">6. Governing Law</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>6.1 These terms shall be governed by and interpreted in accordance with the laws of the United States.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">7. Contact Information</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>7.1 For any questions or queries regarding these terms, please contact us at admin@webdesignfla.com or call (561) 464-6222.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">8. Communication Preferences</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>8.1 By providing your mobile number to WebDesignFLA, you agree that you may receive periodic text messages from us regarding your inquiries, orders or updates about our products and services. Standard text messaging rates may apply as provided by your mobile carrier.</p>
+            <p>8.2 Opt-Out of Text Messages: If you wish to opt out of receiving text messages from us, you can do so at any time. To stop receiving text messages, please reply &#8220;STOP&#8221; to any text message you receive from WebDesignFLA. After you send the SMS message &#8220;STOP&#8221; to us, we will send you an SMS message to confirm that you have been unsubscribed. After this, you will no longer receive SMS messages from us. If you want to start receiving messages again, you can sign up as you did the first time.</p>
+            <p>8.3 Assistance with Text Messages: If at any time you forget what keywords are supported, just text &#8220;HELP&#8221; to the number from which you received the messages. After you send the SMS message &#8220;HELP&#8221; to us, we will respond with instructions on how to use our service as well as how to unsubscribe.</p>
+            <p>Please note that opting out of receiving text messages may impact your use of our services, as certain notifications and updates may only be provided via SMS.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-display text-xl sm:text-2xl font-semibold tracking-tight text-[#0A192F]">9. Privacy and Data Sharing</h2>
+          <div class="mt-3 space-y-3 text-sm sm:text-[0.95rem] text-foreground/80 leading-relaxed">
+            <p>9.1 Your personal information is used only to enhance our services. We do not share your data with any third party.</p>
+            <p>9.2 WebDesignFLA is committed to protecting your privacy. We do not share, sell, rent or lease your personal data to any third parties for their marketing purposes.</p>
+            <p>9.3 Any information collected on this site will be kept strictly confidential and will not be disclosed to any third party without your prior consent, except as required by law.</p>
+            <p>9.4 No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- PHONE CTA BAND -->
+    <section class="relative overflow-hidden section-accent-bg">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div class="reveal text-center">
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-[#0A192F]">Questions about our privacy practices?</h2>
+          <p class="mt-3 text-base text-foreground/70">Call us directly at (561) 464-6222.</p>
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <a href="tel:+15614646222" class="inline-flex items-center gap-2 rounded-xl bg-[#0A192F] px-6 py-3.5 font-semibold text-white hover:bg-[#0E2342] transition-colors">
+              <i data-lucide="phone" class="h-4 w-4"></i>(561) 464-6222
+            </a>
+            <a href="mailto:admin@webdesignfla.com" class="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-6 py-3.5 font-semibold text-[#0A192F] hover:bg-secondary transition-colors">
+              <i data-lucide="mail" class="h-4 w-4"></i>admin@webdesignfla.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="relative border-t border-white/10 bg-[#071427] text-white">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="lg:col-span-1">
+          <a ../ class="flex items-center gap-2">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#00D4FF] text-[#071427] font-display font-bold text-sm">W</span>
+            <span class="font-display text-white text-base font-semibold tracking-tight">WebDesign<span class="text-[#00D4FF]">FLA</span></span>
+          </a>
+          <p class="mt-4 text-sm text-white/60 leading-relaxed">Jupiter, FL web design studio crafting fast, lead-generating websites since 2010.</p>
+        </div>
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Services</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="../web-design/" class="text-white/65 hover:text-white transition-colors">Web Design</a></li>
+            <li><a href="../seo/" class="text-white/65 hover:text-white transition-colors">SEO</a></li>
+            <li><a href="../social/" class="text-white/65 hover:text-white transition-colors">Social Media</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Company</h4>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="../portfolio/" class="text-white/65 hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="../privacy-policy/" class="text-white/65 hover:text-white transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-sm font-semibold text-white">Get in touch</h4>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a href="tel:+15614646222" class="inline-flex items-start gap-2 text-white/85 hover:text-white"><i data-lucide="phone" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span><span class="block font-semibold">(561) 464-6222</span><span class="text-xs text-white/60">Tap to call</span></span></a></li>
+            <li><a href="mailto:admin@webdesignfla.com" class="inline-flex items-start gap-2 text-white/85 hover:text-white"><i data-lucide="mail" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span>admin@webdesignfla.com</span></a></li>
+            <li class="inline-flex items-start gap-2 text-white/85"><i data-lucide="map-pin" class="mt-0.5 h-4 w-4 text-[#00D4FF]"></i><span>103 South U.S. Hwy 1<br />Jupiter, FL 33477</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-xs text-white/55">&copy; <span id="footer-year"></span> WebDesignFLA. All rights reserved.</p>
+        <p class="text-xs text-white/55">Built with craft in Jupiter, FL.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
